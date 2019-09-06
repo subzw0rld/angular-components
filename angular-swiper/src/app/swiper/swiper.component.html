@@ -1,0 +1,16 @@
+<section class="swiper-container" (swipeLeft)="onSwipeLeft()" (swipeRight)="onSwipeRight()"
+  (panmove)="onPanMove($event)" (panend)="onPanEnd()" #swiperContainer>
+  <div class="swiper-wrapper" #swiperWrapper>
+    <ng-content>
+
+    </ng-content>
+  </div>
+  <div class="navigation">
+    <span class="nav-btn previous" (click)="onSwipeRight()">
+      <fa-icon [icon]="faChevronLeft"></fa-icon>
+    </span>
+    <span class="nav-btn next" (click)="onSwipeLeft()">
+      <fa-icon [icon]="faChevronRight"></fa-icon>
+    </span>
+  </div>
+</section>
