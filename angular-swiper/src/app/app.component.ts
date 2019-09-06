@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'angular-swiper';
   dataArr = new Array(10);
   config = {
+    autoplay: false,
+    direction: 'horizontal',
     slideInView: 1,
     slideGap: 25
   }

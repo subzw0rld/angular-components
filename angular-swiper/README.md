@@ -11,8 +11,9 @@ The swiper has a the following dependencies
 ## Configuration
 The swiper has the following configurations:
 
- - autoplay (WIP)
- - direction (Vertical WIP) 
+ - autoplay
+ - autoplayDuration - Time in ms after which the swipe will execute automatically (this functionality requires autoplay to be true)
+ - direction 
  - slideInView - How many slides (1, 2...) should be shown within the swiper area
  - slideGap - The space between the swipers
  - activeSlide - Setting the active slide in the swiper.

@@ -1,11 +1,13 @@
-<section class="swiper-container" (swipeLeft)="onSwipeLeft()" (swipeRight)="onSwipeRight()"
-  (panmove)="onPanMove($event)" (panend)="onPanEnd()" #swiperContainer>
-  <div class="swiper-wrapper" #swiperWrapper>
+<section class="swiper-container" (swipeLeft)="onSwipeLeft()" (swipeRight)="onSwipeRight()"  (swipeup)="onSwipeUp()"  
+(swipedown)="onSwipeDown()" #swiperContainer>
+  <div class="swiper-wrapper"
+    [ngClass]="{'horizontal': config.direction === 'horizontal', 'vertical': config.direction === 'vertical'}"
+    #swiperWrapper>
     <ng-content>
 
     </ng-content>
   </div>
-  <div class="navigation">
+  <div class="navigation" *ngIf="config.direction === 'horizontal'; else verticalNav">
     <span class="nav-btn previous" (click)="onSwipeRight()">
       <fa-icon [icon]="faChevronLeft"></fa-icon>
     </span>
@@ -14,3 +16,14 @@
     </span>
   </div>
 </section>
+
+<ng-template #verticalNav>
+  <div class="navigation vertical">
+    <span class="nav-btn previous" (click)="onSwipeUp()">
+      <fa-icon [icon]="faChevronLeft"></fa-icon>
+    </span>
+    <span class="nav-btn next" (click)="onSwipeDown()">
+      <fa-icon [icon]="faChevronRight"></fa-icon>
+    </span>
+  </div>
+</ng-template>

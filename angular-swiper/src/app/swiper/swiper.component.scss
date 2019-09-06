@@ -5,6 +5,7 @@ $bav-btn-hover-color: rgba(200, 200, 200, 0.5);
 .swiper-container {
     background-color: rgb(88, 88, 88);
     border: 1px solid #000000;
+    box-sizing: border-box;
     position: relative;
     width: 100%;
     height: 100%;
@@ -12,11 +13,15 @@ $bav-btn-hover-color: rgba(200, 200, 200, 0.5);
 }
 
 .swiper-wrapper {
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     width: 100%;
     height: 100%;
     transition:  transform 100ms ease-out;
+}
+
+.swiper-wrapper.vertical {
+    flex-direction: column;
 }
 
 .navigation {
@@ -26,6 +31,23 @@ $bav-btn-hover-color: rgba(200, 200, 200, 0.5);
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+}
+
+.navigation.vertical {
+    flex-direction: column;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: auto;
+
+    .nav-btn:first-child {
+        transform: rotate(90deg);
+    }
+
+    .nav-btn:last-child {
+        transform: rotate(90deg);
+    }
 }
 
 .nav-btn {
