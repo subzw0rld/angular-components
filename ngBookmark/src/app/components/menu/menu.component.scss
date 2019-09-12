@@ -1,0 +1,48 @@
+.header-menu-container {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.active {
+    color: #007a33;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-item {
+    font-size: 1.6rem;
+    padding: 1rem;
+    margin-right: 0.5rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.sub-menu-container {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.sub-menu {
+    display: flex;
+}
+
+.sub-menu-item {
+    margin-right: 1rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
